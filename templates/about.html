@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiénes Somos - BurgerMania</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo de la empresa">
+        <h1>BurgerMania</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Inicio</a></li>
+                <li><a href="{{ url_for('about') }}">Quiénes Somos</a></li>
+                <li><a href="{{ url_for('services') }}">Servicios</a></li>
+                <li><a href="{{ url_for('news') }}">Noticias</a></li>
+                <li><a href="{{ url_for('contact') }}">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="history">
+            <h2>Nuestra Historia</h2>
+            <p>BurgerManía nació de la pasión por las hamburguesas gourmet. Fundada en 2020 por un grupo de amigos amantes de la cocina, nuestro objetivo siempre ha sido ofrecer una experiencia culinaria única. Desde el primer día, hemos trabajado con los mejores ingredientes para crear sabores que deleiten a nuestros clientes</p>
+        </section>
+        
+        <section id="mission-vision">
+            <h2>Misión y Visión</h2>
+            <h3>Misión</h3>
+            <p>Proporcionar hamburguesas de alta calidad, elaboradas con ingredientes frescos y sostenibles, mientras ofrecemos un servicio excepcional a nuestros clientes.</p>
+            <h3>Visión</h3>
+            <p>Ser la cadena de hamburgueserías líder en el país, reconocida por la calidad de nuestros productos y la satisfacción del cliente.</p>
+        </section>
+        
+        <section id="team">
+            <h2>Nuestro Equipo</h2>
+            <div class="team-member">
+                <img src="{{ url_for('static', filename='img/chef.png') }}" alt="Miembro del equipo 1" class="team">
+                <h3>Juan Pérez</h3>
+                <p>Chef Principal</p>
+            </div>
+            <div class="team-member">
+                <img src="{{ url_for('static', filename='img/gerente.png') }}" alt="Miembro del equipo 2" class="team">
+                <h3>María López</h3>
+                <p>Gerente de Marketing</p>
+            </div>
+            <div class="team-member">
+                <img src="{{ url_for('static', filename='img/servicio.png') }}" alt="Miembro del equipo 3" class="team">
+                <h3>Carlos García</h3>
+                <p>Encargado de Servicio al Cliente</p>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div id="social-media">
+            <a href="#"><img src="{{ url_for('static', filename='img/facebook.png') }}" alt="Facebook" class="iconos"></a>
+            <a href="#"><img src="{{ url_for('static', filename='img/twitter.png') }}" alt="Twitter" class="iconos"></a>
+            <a href="#"><img src="{{ url_for('static', filename='img/instagram.png') }}" alt="Instagram" class="iconos"></a>
+        </div>
+        <p>&copy; 2024 BurgerMania. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

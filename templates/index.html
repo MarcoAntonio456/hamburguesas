@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - BurgerMania</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo de la empresa">
+        <h1>BurguerManía</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Inicio</a></li>
+                <li><a href="{{ url_for('about') }}">Quiénes Somos</a></li>
+                <li><a href="{{ url_for('services') }}">Servicios</a></li>
+                <li><a href="{{ url_for('news') }}">Noticias</a></li>
+                <li><a href="{{ url_for('contact') }}">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="description">
+            <h2>Nuestro Producto/Servicio</h2>
+            <p>En La Casa de la Burger, ofrecemos hamburguesas gourmet elaboradas con carne fresca de alta calidad y pan artesanal. Con una variedad de opciones clásicas y creativas, cada bocado está lleno de sabor. Complementa tu experiencia con nuestras papas fritas crujientes y salsas caseras. ¡Ven y descubre el verdadero placer de una buena hamburguesa!</p>
+        </section>
+        
+        <section id="testimonials">
+            <h2>Testimonios de Clientes</h2>
+            <p>María G.: "¡Las hamburguesas son simplemente increíbles! La carne es jugosa y el pan fresco. Sin duda, mi nuevo lugar favorito."</p>
+            <p>Carlos R.: "Me encanta la variedad del menú. La burger vegetariana es la mejor que he probado. ¡Volveré por más!"</p>
+            <p>Ana L.: "El ambiente es genial y el servicio es rápido. ¡La salsa especial le da un toque único a las hamburguesas!"</p>
+        </section>
+        
+        <section id="cta">
+            <a href="#" class="button">¡Contáctanos ahora!</a>
+        </section>
+    </main>
+    
+    <footer>
+        <div id="social-media">
+            <a href="https://www.facebook.com/burgermaniafest/"><img src="{{ url_for('static', filename='img/facebook.png') }}" alt="Facebook" class="iconos"></a>
+            <a href="https://twitter.com/burgermania_twt"><img src="{{ url_for('static', filename='img/twitter.png') }}" alt="Twitter" class="iconos"></a>
+            <a href="https://www.instagram.com/burgermaniaa/?hl=es"><img src="{{ url_for('static', filename='img/instagram.png') }}" alt="Instagram" class="iconos"></a>
+        </div>
+        <p>&copy; 2024 BurgerMania. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

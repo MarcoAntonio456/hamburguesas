@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - BurgerMania</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo de la empresa">
+        <h1>BurgerMania</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Inicio</a></li>
+                <li><a href="{{ url_for('about') }}">Quiénes Somos</a></li>
+                <li><a href="{{ url_for('services') }}">Servicios</a></li>
+                <li><a href="{{ url_for('news') }}">Noticias</a></li>
+                <li><a href="{{ url_for('contact') }}">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <h2>Contáctanos</h2>
+        
+        <form action="{{ url_for('contact') }}" method="POST">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Mensaje:</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <button type="submit" class="button">Enviar</button>
+        </form>
+        
+        <section id="contact-info">
+            <h3>Información de contacto</h3>
+            <p>Dirección: Calle Isac Tamayo 123, La Paz, Bolivia</p>
+            <p>Teléfono: +591 78567890</p>
+            <p>Email: BurgerMania@gmail.com</p>
+        </section>
+        
+        <section id="map">
+            <h3>Nuestra ubicación</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3825.616227058516!2d-68.1443124256405!3d-16.49495904059401!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915f2075a1e12521%3A0x68e30435fd0deba7!2sIsaac%20Tamayo%2C%20La%20Paz!5e0!3m2!1ses-419!2sbo!4v1729090277779!5m2!1ses-419!2sbo" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+    </main>
+    
+    <footer>
+        <div id="social-media">
+            <a href="#"><img src="{{ url_for('static', filename='img/facebook.png') }}" alt="Facebook" class="iconos"></a>
+            <a href="#"><img src="{{ url_for('static', filename='img/twitter.png') }}" alt="Twitter" class="iconos"></a>
+            <a href="#"><img src="{{ url_for('static', filename='img/instagram.png') }}" alt="Instagram" class="iconos"></a>
+        </div>
+        <p>&copy; 2024 BurgerMania. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

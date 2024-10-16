@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noticias - BurgerMania</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo de la empresa">
+        <h1>BurgerMania</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Inicio</a></li>
+                <li><a href="{{ url_for('about') }}">Quiénes Somos</a></li>
+                <li><a href="{{ url_for('services') }}">Servicios</a></li>
+                <li><a href="{{ url_for('news') }}">Noticias</a></li>
+                <li><a href="{{ url_for('contact') }}">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <h2>Últimas Noticias</h2>
+        
+        <article class="news-item">
+            <img src="{{ url_for('static', filename='img/news-1.jpg') }}" alt="Noticia 1">
+            <h3>17, 18 y 19 de Septiembre</h3>
+            <p>¡Conseguí los combos especiales a precio promocional!...</p>
+            <a href="#" class="button">Leer más</a>
+        </article>
+        
+        <article class="news-item">
+            <img src="{{ url_for('static', filename='img/news-2.jpg') }}" alt="Noticia 2">
+            <h3>¡Llega la Nueva Hamburguesa Gourmet!</h3>
+            <p>Estamos emocionados de anunciar el lanzamiento de nuestra hamburguesa gourmet...</p>
+            <a href="#" class="button">Leer más</a>
+        </article>
+        
+        <section id="cta">
+            <a href="{{ url_for('contact') }}" class="button">¡Contáctanos ahora!</a>
+        </section>
+
+    </main>
+    
+    <footer>
+        <div id="social-media">
+            <a href="#"><img src="{{ url_for('static', filename='img/facebook.png') }}" alt="Facebook" class="iconos"></a>
+            <a href="#"><img src="{{ url_for('static', filename='img/twitter.png') }}" alt="Twitter" class="iconos"></a>
+            <a href="#"><img src="{{ url_for('static', filename='img/instagram.png') }}" alt="Instagram" class="iconos"></a>
+        </div>
+        <p>&copy; 2024 BurgerMania. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
